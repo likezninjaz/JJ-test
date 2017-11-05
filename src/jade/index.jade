@@ -1,0 +1,45 @@
+doctype html
+
+html.no-js
+
+  include includes/head
+
+  body
+    .svg-placeholder(style="height: 0; width: 0; position: absolute; visibility: hidden")
+    script(type='text/javascript').
+      document.querySelector('.svg-placeholder').innerHTML = SVG_SPRITE;
+
+    include includes/header
+
+    main.content
+      .wrapper
+       .content__news
+        include includes/news-grid
+       .content__promo
+        .slick-slider
+         .slick-slide
+          img(src="img/image.jpg" alt="Image Title")
+          .slick-slide__content
+           .slick-slide__category Социальная ответственность
+           .slick-slide__header 6 способов от Джонсон и Джонсон, которые помогут сохранить безопасность детей
+           .slick-slide__read
+            a(href="#").slick-slide__read-button Читать
+            button.icon-arrow-red-right
+         .slick-slide
+          img(src="img/image.jpg" alt="Image Title")
+          .slick-slide__content
+           .slick-slide__category Социальная ответственность
+           .slick-slide__header 6 способов от Джонсон и Джонсон, которые помогут сохранить безопасность детей
+           .slick-slide__read
+            a(href="#").slick-slide__read-button Читать
+            button.icon-arrow-red-right
+         .slick-slide
+          img(src="img/image.jpg" alt="Image Title")
+          .slick-slide__content
+           .slick-slide__category Социальная ответственность
+           .slick-slide__header 6 способов от Джонсон и Джонсон, которые помогут сохранить безопасность детей
+           .slick-slide__read
+            a(href="#").slick-slide__read-button Читать
+            button.icon-arrow-red-right
+      .icon-navigate_next
+    include includes/footer

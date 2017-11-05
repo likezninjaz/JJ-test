@@ -1,0 +1,28 @@
+@import variables
+
+=placeholder($color)
+  ::-webkit-input-placeholder
+    color: $color
+  :-moz-placeholder
+    color: $color
+    opacity: 1
+  ::-moz-placeholder
+    color: $color
+    opacity: 1
+  :-ms-input-placeholder
+    color: $color
+
+=ellipsis
+  overflow: hidden
+  text-overflow: ellipsis
+  white-space: nowrap
+
+=font($name, $size)
+  font-family: $name, sans-serif
+  font-size: $size
+
+.ellipsis
+  +ellipsis
+
+.full-width
+  width: 100%

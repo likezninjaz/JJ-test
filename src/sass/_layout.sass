@@ -1,0 +1,336 @@
+html
+  min-width: $layout-min-width
+  height: 100%
+
+body
+  display: flex
+  flex-direction: column
+  height: 100%
+
+::selection
+  background: $select-text-bg
+  color: $select-text-color
+
+::-moz-selection
+  background: $select-text-bg
+  color: $select-text-color
+
+.header
+  flex: 0 0 auto
+  height: $header-height
+  color: $darker-grey
+
+.content
+  flex: 1 0 auto
+  color: $darker-grey
+.wrapper
+  width: $layout-min-width
+  max-width: $layout-max-width
+  margin: 0 auto
+a
+  text-decoration: none
+  color: $darker-grey
+  &:hover
+    color: $red
+.footer
+  margin-top: 100px
+  flex: 0 0 auto
+  height: $footer-height
+  color: white
+  background: $light-grey
+  .footer-1
+    +flex
+    height: 67%
+    margin: auto
+    width: $layout-min-width
+    background: $light-grey
+    color: $darker-grey
+  .footer__menu
+    width: 50%
+    margin: auto
+    line-height: 1.5em
+    ul
+      margin: 0
+      list-style-type: none
+      padding: 0
+      font-size: 0.9em
+      a
+        text-decoration: none
+        color: $darker-grey
+        &:hover
+         color: $red
+  .footer__social-buttons
+    width: 50%
+    text-align: right
+    margin: auto
+  .social-buttons__title
+    text-transform: uppercase
+  .social-buttons__button
+    margin-top: 25px
+    display: inline-block
+    height: 30px
+    width: 30px
+    margin-left: 10px
+  .social-btw
+    background: url("../img/social-1.png") no-repeat center
+  .social-kh
+    background: url("../img/social-2.png") no-repeat center
+  .social-twitter
+    background: url("../img/social-3.png") no-repeat center
+  .social-twitter
+    background: url("../img/social-3.png") no-repeat center
+  .social-youtube
+    background: url("../img/social-4.png") no-repeat center
+  .social-google
+    background: url("../img/social-5.png") no-repeat center
+  .footer-2
+    +flex
+    justify-content: center
+    height: auto
+    background: $red
+  .footer__copyright
+    padding: 18px 0
+    width: $layout-min-width
+    font-size: 0.8em
+    p
+      margin: 4px 0
+      text-align: right
+//main menu
+.menu
+  height: inherit
+  width: $menu-width
+  background: $lighter-grey
+  position: absolute
+  top: 0
+  left: 8%
+.menu__header
+  height: 100px
+  width: $menu-width
+  background: $red url("../img/logo.png") no-repeat center
+  background-size: 60% 30%
+.menu__body
+  +flex-row
+  width: $menu-width
+.menu__side,
+.menu__nav
+  +inline-block
+  height: $header-height - 100px
+.menu__side
+  background: $light-grey
+  width: $menu-side-width
+.menu__nav
+  margin-left: 0
+  padding-left: 0
+  overflow-y: scroll
+.nav__list
+  color: $darker-grey
+  list-style-type: none
+  margin-right: 50px
+  margin-left: 35px
+  padding: 0
+  font-size: 0.8em
+  li
+   border-bottom: 1px solid $light-grey
+   padding: 7px 0
+   a
+    text-decoration: none
+    color: $darker-grey
+    &:hover
+     color: $red
+  &.margin-top
+   margin-top: 20px
+  .sub
+   padding: 0
+   margin: 0
+   font-size: 1em
+   padding-left: 30px
+   border-bottom: none
+   a
+    color: $dark-grey
+   li
+    border-bottom: none
+    padding: 4px 0
+.nav__list-title
+  text-transform: uppercase
+  color: $dark-grey
+  border-bottom: none !important
+
+//slider on header (Flickity)
+.main-carousel
+  height: inherit
+  position: absolute
+  top: 0
+  overflow: hidden
+
+.carousel-cell
+  width: 100%
+  background-color: black
+
+.promo-slide__media
+  opacity: 0.7
+  img
+   height: $header-height
+.promo-slide__content
+  color: white
+  position: absolute
+  bottom: 10%
+  left: 40%
+.promo-slide__header
+  font-size: 3em
+  max-width: 30%
+.promo-slide__read
+  +flex
+  margin-top: 20px
+  align-items: center
+.promo-slide__read-button
+  font-size: 1em !important
+  text-transform: uppercase
+  padding-right: 10px
+  color: white
+//Flickity customization
+.flickity-page-dots
+  bottom: 10px !important
+  left: 100px
+
+.flickity-page-dots .dot
+  width: 12px
+  height: 12px
+  background: transparent !important
+  border: 2px solid white !important
+  opacity: 1 !important
+
+.flickity-page-dots .dot.is-selected
+  background: white !important
+
+.flickity-prev-next-button
+  display: none
+
+//news grid
+.news-grid
+  margin: 0
+  padding: 0
+  display: block
+  margin-bottom: 50px
+.news-grid__items
+  +flex-row
+  list-style-type: none
+  padding: 0
+  flex-wrap: wrap
+  margin-bottom: 0
+.news-grid__items-item
+  height: 350px
+  margin: 12px
+  overflow: hidden
+  img
+    height: inherit
+.news-grid__content
+  margin-top: 10px
+  .news-grid__date
+    font-size: 0.8em
+    color: $dark-grey
+  .news-grid__header
+    font-size: 1em
+    margin-top: 25px
+    display: block
+    color: $darker-grey
+    text-decoration: none
+    &:hover
+      color: $red
+.news-grid__two-col
+  width: $layout-min-width/3*2-24px
+  .news-grid__content
+    position: absolute
+    padding-top: 190px
+    padding-left: 35px
+    width: $layout-min-width/3*2-62px
+  .news-grid__date
+    font-size: 1em
+  .news-grid__header
+    margin-top: 15px
+    font-size: 1.4em
+.news-grid__one-col
+  width: $layout-min-width/3-24px
+  img
+    width: 100%
+.news-grid__all-news, .news-grid__read
+  +flex
+  justify-content: center
+  align-items: center
+  padding-bottom: 40px
+  border-bottom: 1px solid $light-grey
+  width: 0.6*$layout-min-width
+  align-self: center
+  margin: 0 auto
+.news-grid__all-news_text, .news-grid__read_text
+  text-transform: uppercase
+  padding-right: 10px
+.news-grid__read
+  margin-top: 15px
+  justify-content: flex-start
+  padding-bottom: 0
+  border-bottom: none
+
+//slick promo slider
+.slick-slide
+  opacity: 0.5
+  height: auto
+  padding-top: 35px !important
+  color: white
+  img
+    width: 100% !important
+    height: 510px !important
+.slick-slide__content
+  +flex-column
+  align-items: center
+  position: absolute
+  top: 60%
+  width: 820px
+.slick-slide__category
+  background-color: $red
+  padding: 8px
+  width: 300px
+  text-align: center
+  text-transform: uppercase
+.slick-slide__header
+  margin-top: 20px
+  width: 600px
+  text-align: center
+  font-size: 1.8em
+.slick-slide__read
+  +flex
+  justify-content: center
+  align-items: center
+  margin: 20px auto
+.slick-slide__read-button
+  text-transform: uppercase
+  padding-right: 10px
+  color: white
+.slick-active
+  opacity: 1
+  padding-top: 0 !important
+  img
+    height: 580px !important
+.slick-arrow
+  position: absolute
+  z-index: 101
+  display: inline-block
+  top: 50%
+  border: none
+  cursor: pointer
+  padding: 0
+  opacity: 1
+  color: transparent
+  background-color: transparent
+  outline: none
+  &:active
+    outline: none
+  &:focus
+    outline: none
+.slick-prev
+  left: 0
+  background: url("../img/arrow-left.svg") no-repeat center
+  background-size: 35px 35px
+.slick-next
+  left: 95%
+  background: url("../img/arrow-right.svg") no-repeat center
+  background-size: 35px 35px

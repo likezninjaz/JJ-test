@@ -1,0 +1,37 @@
+//icons
+=icon
+  display: inline-block
+  padding: 0
+  border: none
+  background-color: transparent
+  background-repeat: no-repeat
+  background-position: center
+  cursor: pointer
+  iframe
+   margin: auto
+   border: none
+=menu-icon
+  width: $menu-side-width*0.5
+  height: $menu-side-width*0.5
+  margin: $menu-side-width*0.25
+  img
+   width: $menu-side-width*0.5
+   height: $menu-side-width*0.5
+   stroke: black
+   &:hover
+    stroke: $black
+
+.icon-burger
+  +icon
+  +menu-icon
+
+.icon-search
+  +icon
+  +menu-icon
+  background-image: url("../img/svg/icons/icon-search.svg")
+
+.icon-arrow-red-right
+  +icon
+  width: 30px
+  height: 30px
+  background-image: url("../img/svg/icons/arrow-red-right.svg")
